@@ -20,6 +20,11 @@ export default {
     showSwiper () {
       return this.list.length
     }
+    // list1 () {
+    //   return this.list.map(function (item) {
+    //     return require(item.imgUrl)
+    //   })
+    // }
   },
   data () {
     return {

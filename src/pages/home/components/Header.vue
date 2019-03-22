@@ -28,7 +28,7 @@ export default {
   @import '~styles/variables.styl'
   .header
     display:flex
-    line-height:0.86rem
+    line-height:$headerHeight
     background: $bgColor
     color: #fff
     .header-left
