@@ -4,7 +4,7 @@
       v-for="item of letters"
       :key="item"
       :ref="item"
-      @touchStart="handleTouchStart"
+      @touchstart="handleTouchStart"
       @touchmove="handleTouchMove"
       @touchend="handleTouchEnd"
       @click="handleClick"
@@ -18,7 +18,7 @@
 export default {
   name: 'CityAlphabet',
   data () {
-    return{
+    return {
       touchStatus: false
     }
   },
@@ -44,7 +44,11 @@ export default {
     handleTouchMove (e) {
       if (this.touchStatus) {
         const startY = this.$refs['A'][0].offsetTop
-        console.log(startY)
+        const touchY = e.touches[0].clientY - 79
+        const index = Math.floor((touchY - startY) / 20)
+        if (index >= 0 && index < this.letters.length) {
+          this.$emit('change', this.letters[index])
+        }
       }
     },
     handleTouchEnd () {
