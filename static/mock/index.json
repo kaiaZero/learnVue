@@ -4,16 +4,16 @@
     "city": "北京",
     "swiperList": [{
         "id": "0001",
-        "imgUrl": "http://show2019.oss-ap-southeast-1.aliyuncs.com/static/slide11.jpg"
+        "imgUrl": "slide11.jpg"
       },{
         "id": "0002",
-        "imgUrl": "@/assets/images/slide11.jpg"
+        "imgUrl": "slide11.jpg"
       },{
         "id": "0003",
-        "imgUrl": "http://show2019.oss-ap-southeast-1.aliyuncs.com/static/slide13.jpg"
+        "imgUrl": "slide13.jpg"
       },{
         "id": "0004",
-        "imgUrl": "http://show2019.oss-ap-southeast-1.aliyuncs.com/static/slide14.jpg"
+        "imgUrl": "slide14.jpg"
       }],
     "iconList": [{
           "id": "001",

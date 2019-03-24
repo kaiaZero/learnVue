@@ -3,7 +3,8 @@
     <swiper :options="swiperOption" v-if="showSwiper">
       <!-- slides -->
       <swiper-slide v-for="item of list" :key= "item.id">
-        <img class="swiper-image" :src="item.imgUrl">
+        <!-- <img class="swiper-image" :src="getImgSrc(item)"> -->
+        <img class="swiper-image" :src="require(`@/assets/images/${item.imgUrl}`)">
       </swiper-slide>
       <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
@@ -25,6 +26,12 @@ export default {
     //     return require(item.imgUrl)
     //   })
     // }
+  },
+   methods: {
+     getImgSrc(item) {
+      console.log(item.imgUrl)
+      return require(`@/assets/images/${item.imgUrl}`);
+    }
   },
   data () {
     return {
