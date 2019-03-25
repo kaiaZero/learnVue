@@ -21,16 +21,11 @@ export default {
     showSwiper () {
       return this.list.length
     }
-    // list1 () {
-    //   return this.list.map(function (item) {
-    //     return require(item.imgUrl)
-    //   })
-    // }
   },
-   methods: {
-     getImgSrc(item) {
+  methods: {
+    getImgSrc (item) {
       console.log(item.imgUrl)
-      return require(`@/assets/images/${item.imgUrl}`);
+      return require(`@/assets/images/${item.imgUrl}`)
     }
   },
   data () {
@@ -40,23 +35,6 @@ export default {
         loop: true,
         autoplay: 3000
       }
-      // swiperList: [{
-      //   id: '001',
-      //   imgUrl: require('@/assets/images/slide11.jpg')
-      // }, {
-      //   id: '002',
-      //   imgUrl: require('@/assets/images/slide12.jpg')
-      // }, {
-      //   id: '003',
-      //   imgUrl: require('@/assets/images/slide13.jpg')
-      // }, {
-      //   id: '004',
-      //   imgUrl: require('@/assets/images/slide14.jpg')
-      // }, {
-      //   id: '005',
-      //   imgUrl: require('@/assets/images/slide15.jpg')
-      // }
-      // ]
     }
   }
 }
