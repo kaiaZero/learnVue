@@ -4,10 +4,11 @@
     <ul>
       <router-link
         tag="li"
-        :to="'/detail/' + item.id"
         class="item border-bottom"
         v-for= "item of list"
-        :key= "item.id">
+        :key= "item.id"
+        :to="'/detail/' + item.id"
+      >
         <img class= "item-img" :src="item.imgUrl">
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
