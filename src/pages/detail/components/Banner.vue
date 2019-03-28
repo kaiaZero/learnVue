@@ -2,36 +2,45 @@
   <div>
     <div class ="banner" @click="handleBannerClick">
       <img class="banner-img"
-           src="//img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_600x330_f922b488.jpg" />
+           :src="bannerImg" />
       <div class="banner-info">
         <div class="banner-title">
-          故宫(AAAAA景区)
+          {{sightName}}
         </div>
         <div class="banner-number">
-          <span class='iconfont banner-icon'>&#xe67f;</span>39
+          <span class='iconfont banner-icon'>&#xe67f;</span>
+          {{this.bannerImgs.length}}
         </div>
       </div>
     </div>
-    <common-gallary
-      :imgs="imgs"
-      v-if="showGallary"
-      @close="handleGallaryClose"
-      >
-    </common-gallary>
+    <fade-animation>
+      <common-gallary
+        :imgs="bannerImgs"
+        v-if="showGallary"
+        @close="handleGallaryClose"
+        >
+      </common-gallary>
+    </fade-animation>
   </div>
 </template>
 
 <script>
 import CommonGallary from 'common/gallary/Gallary'
+import FadeAnimation from 'common/fade/FadeAnimation'
 export default {
   name: 'DetailBanner',
+  props: {
+    sightName: String,
+    bannerImg: String,
+    bannerImgs: Array
+  },
   components: {
-    CommonGallary
+    CommonGallary,
+    FadeAnimation
   },
   data () {
     return {
       showGallary: false,
-      imgs: ['http://img1.qunarzz.com/sight/p55/201211/04/fbcab3e5d6479ce893835fbb.jpg', 'http://img1.qunarzz.com/wugc/p123/201211/19/a2045d091f02b25493835fbb.png_r_800x800_c59f0eba.png']
     }
   },
   methods: {
