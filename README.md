@@ -20,10 +20,13 @@ npm run build
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).  
 
-<br/>
-## 移动端的旅游网站页面开发
+
+<br/> 
+
+## 移动端的旅游网站页面开发 
+
 * 使用vue-cli构建，主要完成了首页，城市搜索列表和景点推荐页面的布局及数据逻辑   
 * 使用axios发送ajax请求，获取模拟数据
 * vuex实现非父子组件间的传值
